@@ -6,6 +6,7 @@
  */
 import { useState, useMemo } from "react";
 import { JCheckbox, JCheckboxGroup } from "./checkbox";
+import JDragTab from "./dragTab";
 
 const Main = () => {
   const [checkList , setCheckList] = useState<Array<string>>(['apple','xiaomi']);
@@ -39,7 +40,7 @@ const Main = () => {
         )
       })
     } */}
-
+    <JDragTab options={[{value:1},{value:2},{value:3},{value:4}]}/>
     <JCheckboxGroup checkedList={checkedList} change={handleChange}>
     {
       checkList.map(item => {

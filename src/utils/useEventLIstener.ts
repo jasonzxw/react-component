@@ -1,7 +1,7 @@
 /*
  * @author: jason_zuo
  * @LastEditors: jason_zuo
- * @LastEditTime: 2023-04-10 14:28:13
+ * @LastEditTime: 2023-04-13 17:55:13
  * @FilePath: \react-component\src\utils\useEventLIstener.ts
  */
 import { useEffect } from "react";
@@ -41,7 +41,7 @@ const useEventListener = (eventName: string , handler: noop , options: Options =
             once: options.once
         })
 
-        return targetElement.removeEventListener(eventName,eventListener,{
+        return () => targetElement.removeEventListener(eventName,eventListener,{
             capture: options.capture,
         })
 

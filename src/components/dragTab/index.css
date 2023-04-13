@@ -1,0 +1,8 @@
+.tab-container{
+    width: 1200px;
+}
+
+.el{
+    border: 1px solid black;
+    cursor: pointer;
+}
