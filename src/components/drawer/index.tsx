@@ -6,12 +6,11 @@ export interface DrawerProps {
 }
 
 const Drawer = ({ visible, place = "right", closeDrawer }: DrawerProps) => {
-  const style = place === "right" ? { right: 0 ,} : { left: 0 };
   return (
     <>
       {visible && (
         <div className="drawerContainer">
-          <div className={['drawer', place === "right" ? 'rtr' : 'ltr'].join(' ')} style={style} onClick={closeDrawer}></div>
+          <div className={['drawer', place === "right" ? 'rtr' : 'ltr'].join(' ')} onClick={closeDrawer}></div>
         </div>
       )}
     </>

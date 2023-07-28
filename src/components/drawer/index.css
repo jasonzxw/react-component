@@ -16,11 +16,12 @@
 
 .drawer.ltr {
     animation: ltr .3s;
-
+    left: 0
 }
 
 .drawer.rtr {
     animation: rtr .3s;
+    right: 0
 }
 
 @keyframes ltr{
