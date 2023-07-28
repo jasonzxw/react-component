@@ -13,6 +13,8 @@ import Select from "./select";
 import Modal , {ModalProps}  from "./modal";
 import Drawer from "./drawer";
 import ReactDOM from "react-dom";
+import Skeleton from "./skeleton";
+import Toast from "./toast";
 type select = {
   label: string ,
   value: string
@@ -44,6 +46,7 @@ const Main = () => {
 
   const [drawerVisible,setDrawerVisible] = useState<boolean>(false)
 
+  const [toastVisible , setToastVisible] = useState<boolean>(false)
 
   const time = useEndTime(10)
 
@@ -85,14 +88,28 @@ const Main = () => {
   const closeDrawer = () => {
     setDrawerVisible(false)
   }
+
+  const openToast = () => {
+    setToastVisible(true)
+  }
+
+  const closeToast = () => {
+    setToastVisible(false)
+  }
+
   return(
     <>
+    <Skeleton />
     <button onClick={openModal}>
       hi
       </button>
       <button onClick={openDrawer}>
       openDrawer
       </button>
+      <button onClick={openToast}>
+      openToast
+      </button>
+      <Toast closeToast={closeToast} visible={toastVisible} title="hi" content="enjoy life"/>
       <Drawer visible={drawerVisible} closeDrawer={closeDrawer} place="left"/>
     {/* <Modal visible={modalVisible} closeModal={closeModal}/> */}
     {/* <Select data={selectList}/> */}

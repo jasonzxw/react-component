@@ -1,0 +1,19 @@
+.toast{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    animation: rtr 0.3s;
+    width: 300px;
+    background-color: #fff;
+    color: black;
+    border-radius: 4px;
+}
+
+@keyframes rtr {
+    0% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
