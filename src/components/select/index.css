@@ -1,0 +1,43 @@
+.select-main{
+    width: 150px;
+    height: 32px;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+}
+.select-input{
+    border: 1px solid #d9d9d9;
+    position: relative;
+    padding: 0 11px;
+    display: flex;
+    border-radius: 6px;
+}
+
+.select-input-val{
+    flex: 1;
+}
+.select-input-show{
+    flex-basis: 20px;
+    transform: rotate(90deg);
+    transform: all 0.3s;
+}
+.select-main.active  .select-input  .select-input-show{
+    transform: rotate(270deg);
+    transform-origin: 5px center;
+}
+
+.seletc-data{
+    position: absolute;
+    width: 100%;
+    padding: 0 11px;
+    visibility: hidden;
+    transition: all .3s;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.select-main.active .seletc-data{
+    visibility: visible;
+    opacity: 1;
+}

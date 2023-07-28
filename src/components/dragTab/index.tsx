@@ -1,7 +1,7 @@
 /*
  * @author: jason_zuo
  * @LastEditors: jason_zuo
- * @LastEditTime: 2023-04-13 16:57:55
+ * @LastEditTime: 2023-04-14 09:28:28
  * @FilePath: \react-component\src\components\dragTab\index.tsx
  */
 import { useEffect, useRef } from 'react'
@@ -21,7 +21,9 @@ const JDragTab = (props: any) => {
     let dropRef : HTMLElement ;
 
     const dragStart = (e: DragEvent) =>{
-        dragRef = e.target as HTMLElement;
+        dragRef = e.target as HTMLDivElement;
+        // e.dataTransfer?.setData('el',dragRef)
+        // dragRef.style.visibility = 'hidden'
     }
 
     const dragOver = (e: DragEvent) => {

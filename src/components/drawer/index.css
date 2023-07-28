@@ -1,0 +1,42 @@
+.drawerContainer{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.45);
+}
+
+.drawer{
+    position: absolute;
+    width: 30%;
+    background: #fff;
+    height: 100%;
+    animation: ltr .3s;
+}
+
+.drawer.ltr {
+    animation: ltr .3s;
+
+}
+
+.drawer.rtr {
+    animation: rtr .3s;
+}
+
+@keyframes ltr{
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes rtr{
+    0% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
