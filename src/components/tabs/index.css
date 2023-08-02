@@ -1,0 +1,32 @@
+.tabHeader{
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+    border-bottom: 1px solid rgb(235, 238, 245);
+}
+
+.tabHeader .tabTitle{
+    margin: 0 0 0 32px;
+    padding: 12px 0px;
+}
+.tabHeader .tabTitle.isActive{
+    color: #1677ff;
+}
+.tabHeader .tabTitle:hover{
+    cursor: pointer;
+}
+
+.tabHeader .tabTitle:first-child{
+    margin: 0%;
+}
+
+.tabHeader .tabTitleBorder{
+    position: absolute;
+    background: #1677ff;
+    height: 2px;
+    bottom: -1px;
+    transition: left .3s;
+}
+.tabWrapper .tabContent{
+    display: flex;
+}

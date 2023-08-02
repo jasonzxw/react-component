@@ -1,0 +1,14 @@
+.progress-container{
+    height: 6px;
+    background-color: rgb(235, 238, 245);
+    width: 100px;
+    border-radius: 100px;
+}
+.progress-container .progress{
+    height: 100%;
+    text-align: right;
+    border-radius: 100px;
+}
+.progress-container .progress .progress-innertext{
+    margin: 0 5px;
+}
