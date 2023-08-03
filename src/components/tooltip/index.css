@@ -1,0 +1,17 @@
+.tooltip-container{
+    position: absolute;
+    border: 1px solid black;
+    color: #fff;
+    z-index: 999;
+}
+.tooltip-arraw{
+    position: relative;
+}
+.tooltip-container::after{
+    content: '';
+    position: absolute;
+    left: 40%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}

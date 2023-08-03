@@ -19,7 +19,7 @@ const Tabs = ({ items, onChange ,defaultKey}: TabsProps) => {
 
   const [activekey , setActiveKey] = useState<string>(defaultKey);
 
-  const tabRef = useRef(null)
+  const tabRef = useRef<HTMLDivElement>(null)
 
   const hanldlePosition = (parent: HTMLDivElement , targetEl: HTMLDivElement) => {
     const activeEl = parent.getElementsByClassName('isActive')[0] as HTMLDivElement ;
@@ -40,7 +40,7 @@ const Tabs = ({ items, onChange ,defaultKey}: TabsProps) => {
   }
 
   useEffect(() => {
-    hanldlePosition((tabRef.current as unknown as HTMLDivElement).offsetParent as HTMLDivElement,tabRef.current as unknown as HTMLDivElement)
+    hanldlePosition((tabRef.current as HTMLDivElement).offsetParent as HTMLDivElement,tabRef.current  as HTMLDivElement)
   },[])
 
   return (

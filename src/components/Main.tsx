@@ -17,7 +17,8 @@ import Skeleton from "./skeleton";
 import Toast from "./toast";
 import Progress from './progress'
 import Tabs , {TapColumns} from './tabs'
-
+import Tooltip from "./tooltip";
+import Carousel from './carousel'
 type select = {
   label: string ,
   value: string
@@ -121,6 +122,14 @@ const Main = () => {
 
   return(
     <>
+    <Carousel />
+    <Tooltip text="hello world" dir="left">
+      <button>打开</button>
+      </Tooltip>
+
+      <Tooltip text="hello world22" dir="right">
+      <button>打开</button>
+      </Tooltip>
     <Tabs items={items} defaultKey="1"/>
     <Tabs items={items} defaultKey="2"/>
     <Progress width={50} color="#409eff" textInside="hi"/>
