@@ -20,6 +20,7 @@ import Tabs, { TapColumns } from "./tabs";
 import Tooltip from "./tooltip";
 import Carousel from "./carousel";
 import TimeLine from "./timeLine";
+import Refresh from './refresh'
 type select = {
   label: string;
   value: string;
@@ -141,6 +142,7 @@ const Main = () => {
   ];
   return (
     <>
+    <Refresh />
     <TimeLine data={timeLineData}/>
       <Carousel />
       <Tooltip text="hello world" dir="left">
